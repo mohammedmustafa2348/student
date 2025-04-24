@@ -32,8 +32,8 @@ The Student Service provides the following functionalities:
 
 1. Clone the repository
    ```bash
-   git clone <repository-url>
-   cd student-service
+   git clone git@github.com:mohammedmustafa2348/student.git
+   cd student
    ```
 
 2. Database Configuration
@@ -116,6 +116,12 @@ Connection details:
    ```bash
    curl http://localhost:8081/api/students/grade/10
    ```
+
+4. Get all students by school name
+   ```bash
+   curl http://localhost:8081/api/students/grade/High%20School
+   ```
+   
 
 ## API Documentation
 
