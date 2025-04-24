@@ -1,0 +1,104 @@
+{
+  "info": {
+    "name": "Student Service API",
+    "description": "API for managing student information",
+    "version": "1.0"
+  },
+  "item": [
+    {
+      "name": "Create Student",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{base_url}}/api/students",
+        "body": {
+          "mode": "raw",
+          "raw": {
+            "studentId": "STU001",
+            "name": "John Doe",
+            "grade": "10",
+            "mobileNumber": "1234567890",
+            "schoolName": "Example School",
+            "emailId": "john.doe@example.com"
+          }
+        }
+      }
+    },
+    {
+      "name": "Get All Students",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{base_url}}/api/students"
+      }
+    },
+    {
+      "name": "Get Student by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{base_url}}/api/students/{studentId}"
+      }
+    },
+    {
+      "name": "Update Student",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{base_url}}/api/students/{studentId}",
+        "body": {
+          "mode": "raw",
+          "raw": {
+            "studentId": "STU001",
+            "name": "John Doe Updated",
+            "grade": "11",
+            "mobileNumber": "1234567890",
+            "schoolName": "Example School",
+            "emailId": "john.doe@example.com"
+          }
+        }
+      }
+    },
+    {
+      "name": "Delete Student",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": "{{base_url}}/api/students/{studentId}"
+      }
+    },
+    {
+      "name": "Get Students by Grade",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{base_url}}/api/students/grade/{grade}"
+      }
+    },
+    {
+      "name": "Get Students by School",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{base_url}}/api/students/school/{schoolName}"
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8081",
+      "type": "string"
+    }
+  ]
+}
